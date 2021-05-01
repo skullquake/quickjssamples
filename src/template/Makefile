@@ -161,6 +161,8 @@ CFLAGS+=-g
 CFLAGS+=-MMD
 CFLAGS+=-Wno-array-bounds
 CFLAGS+=-Wno-format-truncation
+CFLAGS+=-I./src
+CFLAGS+=-I./src/quickjs
 CFLAGS+=-D_GNU_SOURCE
 CFLAGS+=-DCONFIG_VERSION=\"2020-11-08\"
 CFLAGS+=-DHAVE_STRUCT_TIMEVAL
@@ -178,7 +180,9 @@ endif
 #CFLAGS+=-DHAVE_BOOL_T
 #CFLAGS+=-DHAVE_STDBOOL_H
 #CXXFLAGS+=$(CFLAGS)
+CXXFLAGS+=-I./src
 CXXFLAGS+=-I./src/quickjspp
+CXXFLAGS+=-I./src/quickjs
 CXXFLAGS+=-std=c++17
 CXXFLAGS+=-fpermissive
 ifneq (,$(findstring djgpp,$(TGT_MACHINE)))
